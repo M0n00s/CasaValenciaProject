@@ -20,7 +20,7 @@ export const LoginPage = ({ setLogin }: any) => {
       return;
     }
     setLogin(true);
-    navigate("/");
+    navigate("/", { replace: true });
   };
   return (
     <div className="ContainerLogin">
