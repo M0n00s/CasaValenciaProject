@@ -1,7 +1,3 @@
-import React from 'react'
-
 export const AppPage = () => {
-  return (
-    <div>AppPage</div>
-  )
-}
+  return <div>AppPage</div>;
+};

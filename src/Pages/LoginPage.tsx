@@ -4,15 +4,15 @@ import { Toaster, toast } from "react-hot-toast";
 
 import "./css/LoginPageCss.css";
 
-export const LoginPage = ({ setLogin }) => {
+export const LoginPage = ({ setLogin }: any) => {
   const navigate = useNavigate();
   // input handler
   const [code, setCode] = useState("");
-  const onInputChange = ({ target }) => {
+  const onInputChange = ({ target }: any) => {
     setCode(target.value);
   };
   // login access
-  const onLogin = (e) => {
+  const onLogin = (e: any) => {
     e.preventDefault();
     if (code !== "2526") {
       toast.error("wrong code, Please contact us");
