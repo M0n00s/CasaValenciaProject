@@ -5,17 +5,22 @@ import { LoginPage } from "../Pages/LoginPage";
 
 export const LoginRouter = () => {
   const [Login, setLogin] = useState(false);
+  console.log(Login);
 
   return (
     <>
       <Routes>
         {!Login ? (
-          <Route path="/login" element={<LoginPage setLogin={setLogin} />} />
+          <>
+            <Route path="/login" element={<LoginPage setLogin={setLogin} />} />
+            <Route path="*" element={<Navigate to="login" />} />
+          </>
         ) : (
-          <Route path="/" element={<AppPage />} />
+          <>
+            <Route path="/" element={<AppPage />} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </>
         )}
-
-        <Route path="*" element={<Navigate to="login" />} />
       </Routes>
     </>
   );
