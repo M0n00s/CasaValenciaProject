@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.ContainerLogin{
+    height: calc(100vh - 2rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:white;
+    font-weight: 800;
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20201009/pngtree-abstract-wavy-3d-papercut-background-with-purple-blue-gradient-colors-image_406393.jpg');
+}
+
+p{
+    margin: 0;
+}
+
+.titleLogin{
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    font-size: 4rem;
+    color: ghostwhite;
+}
+.codeLogin{
+    color: gray;
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+}
+.formLoginContainer{
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+}
+.formLoginContainer input{
+    border-radius: 6px;
+}
+
+/* mobile */
+@media only screen and (min-width: 320px) and (max-width: 736px){
+    .formLoginContainer{
+        flex-direction: column;
+    }
+}
+
+  
