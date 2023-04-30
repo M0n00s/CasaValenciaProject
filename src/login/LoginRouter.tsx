@@ -16,8 +16,7 @@ export const LoginRouter = () => {
           </>
         ) : (
           <>
-            <Route path="/" element={<AppPage />} />
-            <Route path="*" element={<Navigate to="/" />} />
+            <Route path="/*" element={<AppPage />} />
           </>
         )}
       </Routes>
