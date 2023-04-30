@@ -1,3 +1,3 @@
 export const AppPage = () => {
-  return <div>AppPage</div>;
+  return <div className="bg-red-500">hola mundo</div>;
 };

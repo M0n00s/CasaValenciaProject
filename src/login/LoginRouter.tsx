@@ -5,7 +5,6 @@ import { LoginPage } from "../Pages/LoginPage";
 
 export const LoginRouter = () => {
   const [Login, setLogin] = useState(false);
-  console.log(Login);
 
   return (
     <>

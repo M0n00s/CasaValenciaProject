@@ -7,7 +7,7 @@ body{
 }
 
 .ContainerLogin{
-    height: calc(100vh - 2rem);
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,6 +34,10 @@ p{
     border: none;
     outline: none;
     padding: 0.5rem 1rem;
+}
+.codeLogin:focus{
+    border: none;
+    outline: none;
 }
 .formLoginContainer{
     gap: 1rem;
