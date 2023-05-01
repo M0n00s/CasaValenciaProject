@@ -22,7 +22,7 @@ export const Hero = () => {
           </button>
         </div>
       </div>
-      <div className="lg:col-span-3 hidden lg:inline ">
+      <div className="lg:col-span-3 hidden md:inline ">
         <img
           src="https://media.istockphoto.com/id/1146621051/es/vector/reserva-de-hotel-b%C3%BAsqueda-y-reserva-mano-sosteniendo-un-tel%C3%A9fono-inteligente-ilustraci%C3%B3n.jpg?s=612x612&w=0&k=20&c=FkB5nCg_fgsulnkmfMG9shrUPLBooLoWmWTXfJ4d_YM="
           alt="img"

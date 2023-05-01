@@ -4,7 +4,7 @@ import { Welcome } from "../components/Welcome";
 
 export const Home = () => {
   return (
-    <div>
+    <div className="md:px-12">
       <Hero />
       <Welcome />
     </div>
