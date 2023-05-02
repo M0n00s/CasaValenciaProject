@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const Hero = () => {
   return (
-    <div className=" hero  grid grid-cols-1 lg:grid-cols-8 overflow-x-hidden h-[90vh] ">
+    <div className="px-12 hero  grid grid-cols-1 lg:grid-cols-8 overflow-x-hidden h-[90vh] ">
       <div className=" lg:col-span-5 flex flex-col  justify-center px-12 gap-8 py-8 ">
         <h1 className=" text-5xl lg:text-7xl font-bold  ">
           Comodidad, atención y diversión al alcance de todos

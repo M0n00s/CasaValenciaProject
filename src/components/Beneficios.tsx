@@ -11,7 +11,7 @@ import {
 
 export const Beneficios = () => {
   return (
-    <div className="p-12 grid grid-cols-1 md:grid-cols-2">
+    <div className="px-24 pb-6 grid grid-cols-1 md:grid-cols-2">
       <div className="col-span-1">
         <p className="text-xl text-primary font-semibold">
           Servicios mas solicitados
