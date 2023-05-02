@@ -30,7 +30,7 @@ export const HabitacionCard = ({
           {camas.map((cama: any) => (
             <div className="flex gap-2 items-center">
               <FaBed />
-              {cama[Object.keys(cama)]} {Object.keys(cama)}
+              {cama[Object.keys(cama).toString()]} {Object.keys(cama)}
             </div>
           ))}
         </p>
