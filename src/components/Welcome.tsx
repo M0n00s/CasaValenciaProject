@@ -4,7 +4,7 @@ import { posadaGalery } from "../db/Db";
 export const Welcome = () => {
   return (
     <>
-      <div className="px-24 pt-6 flex flex-col gap-4 ">
+      <div className=" px-12 md:px-24 pt-6 flex flex-col gap-4 ">
         <h2 className="font-bold text-4xl text-primary ">
           Posada Casa Valencia
         </h2>
@@ -15,7 +15,7 @@ export const Welcome = () => {
         </p>
       </div>
       {/* Galeria */}
-      <div className="grid  grid-cols-1 md:grid-cols-8 rounded-lg px-24 py-6 gap-1  box-content">
+      <div className="grid  grid-cols-1 md:grid-cols-8 rounded-lg px-12 md:px-24 py-6 gap-1  box-content">
         {/* foto grande */}
         <div className=" md:col-span-4 md:h-[35vh] lg:h-[50vh] ">
           <img
