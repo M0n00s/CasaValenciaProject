@@ -1,5 +1,6 @@
 import React from "react";
 import { IoMdCall } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 export const Hero = () => {
   return (
@@ -12,14 +13,18 @@ export const Hero = () => {
           Una estancia como la mereces, en el
           <span className="text-secondary"> Tigre Estado Aragua</span>
         </p>
-        <div className="flex flex-col lg:flex-row  gap-8">
-          <button className="bg-primary text-white py-2 px-4 rounded-lg font-semibold whitespace-nowrap ">
-            Ver Habitaciones
-          </button>
-          <button className="flex gap-2 items-center p-1">
-            <IoMdCall className="bg-secondary text-white p-3 rounded-full box-content" />{" "}
-            Contactanos
-          </button>
+        <div className="flex flex-col lg:flex-row items-center gap-8">
+          <Link to="/habitaciones">
+            <button className="bg-primary text-white py-2 px-4 rounded-lg font-semibold whitespace-nowrap ">
+              Ver Habitaciones
+            </button>
+          </Link>
+          <Link to="/contacto">
+            <button className="flex gap-2 items-center p-1">
+              <IoMdCall className="bg-secondary text-white p-3 rounded-full box-content" />{" "}
+              Contactanos
+            </button>
+          </Link>
         </div>
       </div>
       <div className="lg:col-span-3 hidden md:inline ">
