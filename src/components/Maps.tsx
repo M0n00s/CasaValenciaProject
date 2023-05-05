@@ -7,7 +7,7 @@ export const Maps = () => {
       <h3 className=" pt-6 text-4xl font-semibold text-primary">
         A donde iras...
       </h3>
-      <div className=" pb-12 pt-4 h-[50vh] ">
+      <div className=" pb-12 pt-4 h-[80vh] ">
         <GoogleMaps
           apiKey={"AIzaSyAPqG7r-0msk4PwPkR5Zc6G-i90QxXvr2M"}
           style={{ height: "100%", width: "100%" }}
