@@ -1,6 +1,6 @@
 import { RiGovernmentLine } from "react-icons/ri";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 
 export const Navbar = () => {
@@ -12,7 +12,9 @@ export const Navbar = () => {
         <span className="text-3xl">
           <RiGovernmentLine />
         </span>
-        <p className="font-bold text-xl whitespace-nowrap">Casa Valencia</p>
+        <Link to="/home" className="font-bold text-xl whitespace-nowrap">
+          Casa Valencia
+        </Link>
       </div>
       <nav
         className={` bg-white  pl-8 shadow-md flex flex-col gap-10 fixed w-[80%] sm:max-w-[200px]  h-full top-[10vh] transition-all duration-300  md:static md:items-center  md:flex-row  md:justify-center md:shadow-none md:pl-0 flex-1  ${

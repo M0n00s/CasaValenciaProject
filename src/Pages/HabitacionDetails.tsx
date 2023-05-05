@@ -3,6 +3,8 @@ import { Maps } from "../components/Maps";
 import { Habitaciones } from "../db/Db";
 import { useSlider } from "../hooks/useSlider";
 import { IoMdArrowDropleft, IoMdArrowDropright } from "react-icons/io";
+import { ReservationDate } from "../components/ReservationDate";
+import { ReservationCost } from "../components/ReservationCost";
 
 export const HabitacionDetails = () => {
   const { habtitulo } = useParams();
@@ -36,6 +38,14 @@ export const HabitacionDetails = () => {
         </div>
       </div>
       {/* fin galeria */}
+      <div className="grid grid-cols-1 md:grid-cols-6 gap-2 h-[50vh]">
+        <div className="col-span-1 md:col-span-4 bg-red-300">
+          <ReservationDate />
+        </div>
+        <div className="col-span-1 md:col-span-2 bg-red-300">
+          <ReservationCost />
+        </div>
+      </div>
 
       <Maps />
       <p className="font-bold mb-2 text-xl">
