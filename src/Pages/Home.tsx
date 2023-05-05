@@ -1,6 +1,5 @@
 import React from "react";
 import { Beneficios } from "../components/Beneficios";
-import { Footer } from "../components/Footer";
 import { HabitacionGrid } from "../components/HabitacionGrid";
 import { Hero } from "../components/Hero";
 import { Maps } from "../components/Maps";
@@ -14,10 +13,10 @@ export const Home = () => {
       <Welcome />
       <Beneficios />
       <hr />
-      <Maps />
+      <div className=" px-12 md:px-24">
+        <Maps />
+      </div>
       <HabitacionGrid />
-      <hr />
-      <Footer />
     </div>
   );
 };

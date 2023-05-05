@@ -7,6 +7,7 @@ import {
 } from "react-icons/io";
 import { FaBed } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useSlider } from "../hooks/useSlider";
 
 export const HabitacionCard = ({
   img,
@@ -15,28 +16,14 @@ export const HabitacionCard = ({
   camas,
   precio,
 }: any) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [prevSlide, nextSlide, currentIndex] = useSlider(img);
+  console.log(prevSlide, nextSlide, currentIndex);
 
-  const prevSlide = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? img.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
-
-  const nextSlide = () => {
-    const isLastSlide = currentIndex === img.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  };
-
-  const goToSlide = (slideIndex: number) => {
-    setCurrentIndex(slideIndex);
-  };
   return (
     <>
       <div className="h-[40vh] w-full m-auto  relative group transition-all">
         <div
-          style={{ backgroundImage: `url(${img[currentIndex]})` }}
+          style={{ backgroundImage: `url(${img[currentIndex as number]})` }}
           className="w-full h-full rounded-2xl bg-center bg-cover duration-500  "
         ></div>
         {/* Left Arrow */}

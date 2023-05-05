@@ -4,10 +4,10 @@ import GoogleMaps from "simple-react-google-maps";
 export const Maps = () => {
   return (
     <>
-      <h3 className="px-12 md:px-24 pt-6 text-4xl font-semibold text-primary">
+      <h3 className=" pt-6 text-4xl font-semibold text-primary">
         A donde iras...
       </h3>
-      <div className="px-12 md:px-24 pb-12 pt-4 h-[70vh] ">
+      <div className=" pb-12 pt-4 h-[50vh] ">
         <GoogleMaps
           apiKey={"AIzaSyAPqG7r-0msk4PwPkR5Zc6G-i90QxXvr2M"}
           style={{ height: "100%", width: "100%" }}
