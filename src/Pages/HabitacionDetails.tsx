@@ -10,7 +10,7 @@ export const HabitacionDetails = () => {
   const habitacion = Habitaciones.find(
     (habitacion) => habitacion.titulo === habtitulo?.replace("_", " ")
   );
-  if (!habitacion) return;
+  if (!habitacion) return null;
   const [prevSlide, nextSlide, currentIndex] = useSlider(habitacion.img);
 
   return (
