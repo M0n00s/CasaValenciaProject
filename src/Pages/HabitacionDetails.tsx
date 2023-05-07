@@ -38,13 +38,8 @@ export const HabitacionDetails = () => {
         </div>
       </div>
       {/* fin galeria */}
-      <div className="grid grid-cols-1 md:grid-cols-6 gap-2 h-[50vh]">
-        <div className="col-span-1 md:col-span-4 bg-red-300">
-          <ReservationDate />
-        </div>
-        <div className="col-span-1 md:col-span-2 bg-red-300">
-          <ReservationCost />
-        </div>
+      <div className=" ">
+        <ReservationDate />
       </div>
 
       <Maps />
