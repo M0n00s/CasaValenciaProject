@@ -1,5 +1,6 @@
 import React from "react";
 import { Beneficios } from "../components/Beneficios";
+import { Contacto } from "../components/Contacto";
 import { HabitacionGrid } from "../components/HabitacionGrid";
 import { Hero } from "../components/Hero";
 import { Maps } from "../components/Maps";
@@ -19,6 +20,7 @@ export const Home = () => {
       <div id="habitaciones">
         <HabitacionGrid />
       </div>
+      <Contacto />
     </div>
   );
 };

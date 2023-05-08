@@ -1,9 +1,16 @@
 import { RiGovernmentLine } from "react-icons/ri";
-import { IoMdMenu, IoMdClose, IoMdApps } from "react-icons/io";
-import { Link, NavLink } from "react-router-dom";
+import {
+  IoMdMenu,
+  IoMdClose,
+  IoMdApps,
+  IoMdArrowRoundBack,
+} from "react-icons/io";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { useState } from "react";
 
 export const Navbar = () => {
+  let location = useLocation();
+  console.log(location);
   const [showMenu, setshowMenu] = useState(false);
   // console.log(showMenu);
   return (
@@ -21,18 +28,30 @@ export const Navbar = () => {
           showMenu ? "left-0" : "-left-full"
         } `}
       >
-        {["Home"].map((nav) => (
-          <NavLink
-            key={nav}
-            to={`/${nav.toLowerCase()}`}
-            className={({ isActive }) =>
-              isActive ? "font-semibold text-primary" : ""
-            }
-          >
-            {nav}
-          </NavLink>
-        ))}
-        <a href="#habitaciones">Habitaciones</a>
+        <NavLink
+          to={`/home`}
+          className={({ isActive }) =>
+            isActive ? "font-semibold text-primary" : ""
+          }
+        >
+          {!location.pathname.includes("habitacion") ? (
+            "Home"
+          ) : (
+            <p className="font-semibold text-primary flex items-center gap-4">
+              <span className="text-2xl font-bold">
+                <IoMdArrowRoundBack />
+              </span>{" "}
+              Back to Home
+            </p>
+          )}
+        </NavLink>
+
+        {!location.pathname.includes("habitacion") && (
+          <a href="#habitaciones">Habitaciones</a>
+        )}
+        {!location.pathname.includes("habitacion") && (
+          <a href="#contactanos">Contactanos</a>
+        )}
       </nav>
       <div className=" justify-end items-center  flex gap-2">
         <div>User</div>
