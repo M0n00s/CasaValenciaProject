@@ -5,7 +5,7 @@ import { useState } from "react";
 
 export const Navbar = () => {
   const [showMenu, setshowMenu] = useState(false);
-  console.log(showMenu);
+  // console.log(showMenu);
   return (
     <header className="fixed bg-white flex w-full items-center justify-between px-4 md:px-10 shadow-md h-[10vh] z-[1000000000]">
       <div className="  flex items-center gap-2 text-primary">

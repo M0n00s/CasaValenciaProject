@@ -17,11 +17,11 @@ export const HabitacionCard = ({
   precio,
 }: any) => {
   const [prevSlide, nextSlide, currentIndex] = useSlider(img);
-  console.log(prevSlide, nextSlide, currentIndex);
+  // console.log(prevSlide, nextSlide, currentIndex);
 
   return (
     <>
-      <div className="h-[40vh] w-full m-auto  relative group transition-all">
+      <div className="h-[25vh] md:h-[15vh] lg:h-[40vh] w-full m-auto  relative group transition-all">
         <div
           style={{ backgroundImage: `url(${img[currentIndex as number]})` }}
           className="w-full h-full rounded-2xl bg-center bg-cover duration-500  "
@@ -50,14 +50,17 @@ export const HabitacionCard = ({
             <IoMdPerson />
             {personas} Personas
           </p>
-          <p>
+          <div>
             {camas.map((cama: any) => (
-              <div className="flex gap-2 items-center">
+              <div
+                key={cama[Object.keys(cama).toString()]}
+                className="flex gap-2 items-center"
+              >
                 <FaBed />
                 {cama[Object.keys(cama).toString()]} {Object.keys(cama)}
               </div>
             ))}
-          </p>
+          </div>
           <p className="pt-2">
             <span className="font-semibold ">${precio}</span> Noche
           </p>
