@@ -1,5 +1,5 @@
 import { RiGovernmentLine } from "react-icons/ri";
-import { IoMdMenu, IoMdClose } from "react-icons/io";
+import { IoMdMenu, IoMdClose, IoMdApps } from "react-icons/io";
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 
@@ -21,7 +21,7 @@ export const Navbar = () => {
           showMenu ? "left-0" : "-left-full"
         } `}
       >
-        {["Home", "Habitaciones", "Contacto"].map((nav) => (
+        {["Home"].map((nav) => (
           <NavLink
             key={nav}
             to={`/${nav.toLowerCase()}`}
@@ -32,6 +32,7 @@ export const Navbar = () => {
             {nav}
           </NavLink>
         ))}
+        <a href="#habitaciones">Habitaciones</a>
       </nav>
       <div className=" justify-end items-center  flex gap-2">
         <div>User</div>
@@ -39,7 +40,7 @@ export const Navbar = () => {
           onClick={() => setshowMenu(!showMenu)}
           className=" text-3xl md:hidden"
         >
-          {showMenu ? <IoMdClose /> : <IoMdMenu />}
+          {showMenu ? <IoMdClose /> : <IoMdApps />}
         </button>
       </div>
     </header>

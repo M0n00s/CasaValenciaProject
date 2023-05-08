@@ -16,7 +16,9 @@ export const Home = () => {
       <div className=" px-12 md:px-24">
         <Maps />
       </div>
-      <HabitacionGrid />
+      <div id="habitaciones">
+        <HabitacionGrid />
+      </div>
     </div>
   );
 };

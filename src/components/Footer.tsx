@@ -1,9 +1,13 @@
 import React from "react";
+import { IoMdRocket } from "react-icons/io";
 
 export const Footer = () => {
   return (
-    <div className="h-[30vh] bg-primary flex items-center justify-center text-white font-bold text-xl">
+    <div className="p-6 bg-primary flex items-center justify-between text-white font-bold ">
       <p>Casa Valecia 2023 C.A.</p>
+      <p className="flex gap-1 items-center">
+        <IoMdRocket /> Español (VE)
+      </p>
     </div>
   );
 };
