@@ -24,13 +24,11 @@ export const ReservationDate = ({ habitacion }) => {
   const noches: number = Number(
     formatDistance(state[0].startDate, state[0].endDate).split(" ")[0]
   );
-  console.log(formatDistance(state[0].startDate, state[0].endDate));
-  console.log(noches);
   const costoNoches = noches * habitacion.precio;
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-9 object-contain ">
-      <div className="col-span-1 md:col-span-5  ">
+      <div className="col-span-1 md:col-span-5 ">
         <DateRange
           editableDateInputs={true}
           onChange={(item) => setState([item.selection])}
@@ -73,7 +71,7 @@ export const ReservationDate = ({ habitacion }) => {
 
           <button className="px-4 py-2 bg-primary text-xl text-white font-bold rounded-xl w-full mt-6 mb-2">
             {" "}
-            Reserva{" "}
+            Reservar{" "}
           </button>
           <p className="text-xs font-semibold text-center mb-6">
             No se hará ningún cargo por el momento

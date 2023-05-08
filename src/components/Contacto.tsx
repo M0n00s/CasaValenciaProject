@@ -16,6 +16,7 @@ export const Contacto = () => {
           initialValues={{
             nombre: "",
             correo: "",
+            mensaje: "",
           }}
           validate={(valores) => {
             let errores: any = {};
@@ -44,7 +45,7 @@ export const Contacto = () => {
           }}
           onSubmit={(valores, { resetForm }) => {
             resetForm();
-            console.log("Formulario enviado");
+            console.log(valores);
             cambiarFormularioEnviado(true);
             setTimeout(() => cambiarFormularioEnviado(false), 5000);
           }}
@@ -72,7 +73,7 @@ export const Contacto = () => {
                   type="text"
                   id="correo"
                   name="correo"
-                  placeholder="correo@correo.com"
+                  placeholder="Correo Electronico"
                 />
                 <ErrorMessage
                   name="correo"
@@ -85,20 +86,22 @@ export const Contacto = () => {
               <div>
                 <Field
                   className="h-[25vh] md:h-[20vh] w-[74vw] md:w-[60vw] max-w-[480px] col-span-2 appearance-none  border-b-2 border-primary rounded-md text-gray-700 py-2 px-4 leading-tight focus:outline-none"
-                  name="mensaje"
                   as="textarea"
+                  name="mensaje"
                   placeholder="Mensaje"
                 />
               </div>
 
               <button
-                className="col-span-1 md:col-span-2 py-4 bg-primary text-white rounded-md mb-6 font-bold"
+                className="col-span-1 md:col-span-2 py-4 bg-primary text-white rounded-md font-bold"
                 type="submit"
               >
                 Enviar
               </button>
               {formularioEnviado && (
-                <p className="exito">Formulario enviado con exito!</p>
+                <p className="text-xs text-green-500 font-bold self-center w-full  mb-6 ">
+                  Formulario enviado con exito!
+                </p>
               )}
             </Form>
           )}

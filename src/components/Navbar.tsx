@@ -1,18 +1,11 @@
 import { RiGovernmentLine } from "react-icons/ri";
-import {
-  IoMdMenu,
-  IoMdClose,
-  IoMdApps,
-  IoMdArrowRoundBack,
-} from "react-icons/io";
+import { IoMdClose, IoMdApps, IoMdArrowRoundBack } from "react-icons/io";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { useState } from "react";
 
 export const Navbar = () => {
   let location = useLocation();
-  console.log(location);
   const [showMenu, setshowMenu] = useState(false);
-  // console.log(showMenu);
   return (
     <header className="fixed bg-white flex w-full items-center justify-between px-4 md:px-10 shadow-md h-[10vh] z-[1000000000]">
       <div className="  flex items-center gap-2 text-primary">
@@ -41,7 +34,7 @@ export const Navbar = () => {
               <span className="text-2xl font-bold">
                 <IoMdArrowRoundBack />
               </span>{" "}
-              Back to Home
+              Volver a Home
             </p>
           )}
         </NavLink>
