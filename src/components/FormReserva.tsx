@@ -4,7 +4,7 @@ import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
 import { IoMdSync } from "react-icons/io";
 
-export const FormReserva = ({ habitacion, start, end, setReserva }) => {
+export const FormReserva = ({ habitacion, start, end, setReserva, costo }) => {
   const [spiner, setspiner] = useState(false);
   return (
     <div>
@@ -55,7 +55,7 @@ export const FormReserva = ({ habitacion, start, end, setReserva }) => {
             .send(
               "service_lv11w2s",
               "template_w3yusza",
-              { ...valores, start, end, habitacion },
+              { ...valores, start, end, habitacion, costo },
               "vQxZH2SWWh0zMBOMa"
             )
             .then(
