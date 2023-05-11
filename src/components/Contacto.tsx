@@ -1,9 +1,11 @@
-import { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import emailjs from "emailjs-com";
+import Swal from "sweetalert2";
+import { useState } from "react";
+import { IoMdSync } from "react-icons/io";
 
 export const Contacto = () => {
-  const [formularioEnviado, cambiarFormularioEnviado] = useState(false);
+  const [spiner, setSpiner] = useState(false);
   return (
     <div
       id="contactanos"
@@ -46,7 +48,7 @@ export const Contacto = () => {
           }}
           onSubmit={(valores, { resetForm }) => {
             resetForm();
-
+            setSpiner(true);
             //start send email
             emailjs
               .send(
@@ -58,11 +60,16 @@ export const Contacto = () => {
               .then(
                 function (response) {
                   console.log("SUCCESS!", response.status, response.text);
-                  cambiarFormularioEnviado(true);
-                  setTimeout(() => cambiarFormularioEnviado(false), 5000);
+                  Swal.fire(
+                    "Mensaje Enviado",
+                    "Gracias por contactarnos, en breve nos comunicaremos con usted",
+                    "success"
+                  );
+                  setSpiner(false);
                 },
                 function (error) {
                   console.log("FAILED...", error);
+                  Swal.fire("Good job!", "You clicked the button!", "error");
                 }
               );
             //-------/
@@ -111,16 +118,15 @@ export const Contacto = () => {
               </div>
 
               <button
-                className="col-span-1 md:col-span-2 py-4 bg-primary text-white rounded-md font-bold"
+                className="flex items-center justify-center gap-4 col-span-1 md:col-span-2 py-4 bg-primary text-white rounded-md font-bold"
                 type="submit"
               >
-                Enviar
+                {spiner ? (
+                  <IoMdSync className="animate-spin text-2xl" />
+                ) : (
+                  <p>Enviar</p>
+                )}
               </button>
-              {formularioEnviado && (
-                <p className="text-xs text-green-500 font-bold self-center w-full  mb-6 ">
-                  Formulario enviado con exito!
-                </p>
-              )}
             </Form>
           )}
         </Formik>
