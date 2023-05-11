@@ -4,6 +4,7 @@ import { DateRange } from "react-date-range";
 import { addDays, eachDayOfInterval, formatDistance } from "date-fns";
 import { useState, useEffect } from "react";
 import { Costos } from "./Costos";
+import Swal from "sweetalert2";
 
 export const ReservationDate = ({ habitacion }) => {
   const [cantnum, setCantnum] = useState(1);
