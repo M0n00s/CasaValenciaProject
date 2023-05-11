@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import emailjs from "emailjs-com";
 
 export const Contacto = () => {
   const [formularioEnviado, cambiarFormularioEnviado] = useState(false);
@@ -45,9 +46,26 @@ export const Contacto = () => {
           }}
           onSubmit={(valores, { resetForm }) => {
             resetForm();
-            console.log(valores);
-            cambiarFormularioEnviado(true);
-            setTimeout(() => cambiarFormularioEnviado(false), 5000);
+
+            //start send email
+            emailjs
+              .send(
+                "service_lv11w2s",
+                "template_0shbg89",
+                valores,
+                "vQxZH2SWWh0zMBOMa"
+              )
+              .then(
+                function (response) {
+                  console.log("SUCCESS!", response.status, response.text);
+                  cambiarFormularioEnviado(true);
+                  setTimeout(() => cambiarFormularioEnviado(false), 5000);
+                },
+                function (error) {
+                  console.log("FAILED...", error);
+                }
+              );
+            //-------/
           }}
         >
           {({ errors }) => (
