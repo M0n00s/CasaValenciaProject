@@ -59,7 +59,7 @@ export const Contacto = () => {
               )
               .then(
                 function (response) {
-                  console.log("SUCCESS!", response.status, response.text);
+                  // console.log("SUCCESS!", response.status, response.text);
                   Swal.fire(
                     "Mensaje Enviado",
                     "Gracias por contactarnos, en breve nos comunicaremos con usted",
@@ -68,8 +68,12 @@ export const Contacto = () => {
                   setSpiner(false);
                 },
                 function (error) {
-                  console.log("FAILED...", error);
-                  Swal.fire("Good job!", "You clicked the button!", "error");
+                  // console.log("FAILED...", error);
+                  Swal.fire(
+                    "oh ohh!",
+                    "Hubo un error intente de nuevo!",
+                    "error"
+                  );
                 }
               );
             //-------/

@@ -1,12 +1,14 @@
 import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { DateRange } from "react-date-range";
-import { addDays, eachDayOfInterval, formatDistance } from "date-fns";
+import { addDays, formatDistance } from "date-fns";
 import { useState, useEffect } from "react";
 import { Costos } from "./Costos";
-import Swal from "sweetalert2";
+import { FormReserva } from "./FormReserva";
 
 export const ReservationDate = ({ habitacion }) => {
+  const [reserva, setReserva] = useState(false);
+  // cant de meses en el calendario
   const [cantnum, setCantnum] = useState(1);
   useEffect(() => {
     window.innerWidth > 900 && setCantnum(2);
@@ -69,11 +71,24 @@ export const ReservationDate = ({ habitacion }) => {
               tendra una estancia de {noches + 1} dias y {noches} noches
             </p>
           )}
-
-          <button className="px-4 py-2 bg-primary text-xl text-white font-bold rounded-xl w-full mt-6 mb-2">
-            {" "}
-            Reservar{" "}
-          </button>
+          {reserva ? (
+            <div>
+              <FormReserva
+                habitacion={habitacion.titulo}
+                start={state[0].startDate}
+                end={state[0].endDate}
+                setReserva={setReserva}
+              />
+            </div>
+          ) : (
+            <button
+              onClick={() => setReserva(true)}
+              className="px-4 py-2 bg-primary text-xl text-white font-bold rounded-xl w-full mt-6 mb-2"
+            >
+              {" "}
+              Reservar{" "}
+            </button>
+          )}
           <p className="text-xs font-semibold text-center mb-6">
             No se hará ningún cargo por el momento
           </p>
