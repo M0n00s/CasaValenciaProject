@@ -19,7 +19,7 @@ export const ReservationDate = ({ habitacion }) => {
     {
       startDate: new Date(),
       endDate: addDays(new Date(), 3),
-      color: "#ff6349",
+      color: "#ffc803",
       key: "selection",
     },
   ]);
@@ -77,7 +77,7 @@ export const ReservationDate = ({ habitacion }) => {
                 habitacion={habitacion.titulo}
                 start={state[0].startDate}
                 end={state[0].endDate}
-                setReserva={setReserva} 
+                setReserva={setReserva}
                 costo={costoNoches + 15 + 3}
               />
             </div>

@@ -9,12 +9,15 @@ export const Navbar = () => {
   return (
     <header className="fixed bg-white flex w-full items-center justify-between px-4 md:px-10 shadow-md h-[10vh] z-[1000000000]">
       <div className="  flex items-center gap-2 text-primary">
-        <span className="text-3xl">
-          <RiGovernmentLine />
-        </span>
-        <Link to="/home" className="font-bold text-xl whitespace-nowrap">
+        <a
+          href="#home"
+          className="font-bold text-xl whitespace-nowrap flex items-center gap-2"
+        >
+          <span className="text-3xl">
+            <RiGovernmentLine />
+          </span>
           Casa Valencia
-        </Link>
+        </a>
       </div>
       <nav
         className={` bg-white  pl-8 shadow-md flex flex-col gap-10 fixed w-[80%] sm:max-w-[200px]  h-full top-[10vh] transition-all duration-300  md:static md:items-center  md:flex-row  md:justify-center md:shadow-none md:pl-0 flex-1  ${

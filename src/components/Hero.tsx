@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 
 export const Hero = () => {
   return (
-    <div className=" px-12 grid grid-cols-1 lg:grid-cols-8 overflow-x-hidden h-[100vh] ">
+    <div
+      id="home"
+      className=" px-12 grid grid-cols-1 lg:grid-cols-8 overflow-x-hidden h-[100vh] "
+    >
       <div className=" lg:col-span-5 flex flex-col  justify-center  gap-8 md:pt-[12vh] lg:pt-8 ">
         <h1 className=" text-5xl md:text-7xl font-bold  ">
           Comodidad, atención y diversión al alcance de todos
