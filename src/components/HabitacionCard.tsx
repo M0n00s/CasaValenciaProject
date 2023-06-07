@@ -21,10 +21,10 @@ export const HabitacionCard = ({
 
   return (
     <>
-      <div className="h-[25vh] md:h-[15vh] lg:h-[40vh] w-full m-auto  relative group transition-all">
+      <div className="h-[25vh] md:h-[15vh] lg:h-[40vh] w-full m-auto  relative group transition-all ">
         <div
           style={{ backgroundImage: `url(${img[currentIndex as number]})` }}
-          className="w-full h-full rounded-2xl bg-center bg-cover duration-500  "
+          className="w-full h-full rounded-2xl bg-center bg-cover duration-500 shadow-[0_15px_40px_-25px_rgba(0,0,0,0.9)] "
         ></div>
         {/* Left Arrow */}
         <div className=" absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
@@ -43,7 +43,9 @@ export const HabitacionCard = ({
         />
       </div> */}
       <Link to={`/habitacion/${titulo.replace(" ", "_")}`}>
-        <h2 className="font-semibold text-lg text-primary py-1">{titulo}</h2>
+        <h2 className="font-semibold text-lg text-primary py-1 pt-5">
+          {titulo}
+        </h2>
         <hr />
         <div className="pt-2">
           <p className="flex items-center gap-2">

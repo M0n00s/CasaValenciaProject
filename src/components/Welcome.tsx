@@ -15,9 +15,9 @@ export const Welcome = () => {
         </p>
       </div>
       {/* Galeria */}
-      <div className="grid  grid-cols-1 md:grid-cols-8 rounded-lg px-12 md:px-24 py-6 gap-1  box-content ">
+      <div className="grid  grid-cols-1 md:grid-cols-8 rounded-lg px-12 md:px-24 py-6 gap-1    ">
         {/* foto grande */}
-        <div className=" md:col-span-4 md:h-[35vh] lg:h-[50vh] ">
+        <div className=" md:col-span-4 md:h-[35vh] lg:h-[50vh] shadow-[0_15px_40px_-25px_rgba(0,0,0,0.9)]  ">
           <img
             src={posadaGalery.url1}
             alt="img"
@@ -25,7 +25,7 @@ export const Welcome = () => {
           />
         </div>
         {/* cuatro fotos individuales */}
-        <div className="  md:col-span-4  grid grid-cols-8 grid-rows-2 grid-flow-col gap-1 md:h-[35vh] lg:h-[50vh] ">
+        <div className="  md:col-span-4  grid grid-cols-8 grid-rows-2 grid-flow-col gap-1 md:h-[35vh] lg:h-[50vh] shadow-[0_15px_40px_-25px_rgba(0,0,0,0.9)]  ">
           <div className=" col-span-4 ">
             <img
               src={posadaGalery.url2}

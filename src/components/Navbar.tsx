@@ -14,10 +14,15 @@ export const Navbar = () => {
             href="#home"
             className="font-bold text-xl whitespace-nowrap flex items-center gap-2"
           >
-            <span className="text-3xl">
+            <img
+              className="w-[8rem]"
+              src="https://res.cloudinary.com/dksz8cxlh/image/upload/v1686169279/casavalencia%20img/CasaV-Logo.png"
+              alt="logo"
+            />
+            {/* <span className="text-3xl">
               <RiGovernmentLine />
             </span>
-            Casa Valencia
+            Casa Valencia */}
           </a>
         ) : (
           <NavLink

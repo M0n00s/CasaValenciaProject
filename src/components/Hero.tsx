@@ -23,8 +23,8 @@ export const Hero = () => {
           data-aos-duration="1000"
           data-aos-delay="600"
         >
-          Una estancia como la mereces, en el
-          <span className="text-secondary"> Tigre Estado Aragua</span>
+          Una estancia como la mereces,
+          <span className="text-secondary"> El tigre, Estado Anzoategui</span>
         </p>
         <div className="flex flex-col md:flex-row items-center gap-8">
           <a href="#habitaciones">
