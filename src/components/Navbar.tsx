@@ -50,7 +50,6 @@ export const Navbar = () => {
         )}
       </nav>
       <div className=" justify-end items-center  flex gap-2">
-        <div>User</div>
         <button
           onClick={() => setshowMenu(!showMenu)}
           className=" text-3xl md:hidden"

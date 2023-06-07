@@ -18,11 +18,21 @@ export const HabitacionDetails = () => {
 
   return (
     <div className=" px-12 md:px-24 py-6 pt-[12vh]">
-      <p className="font-bold text-primary text-6xl md:text-7xl">
+      <p
+        className="font-bold text-primary text-6xl md:text-7xl"
+        data-aos="fade-right"
+        data-aos-duration="1000"
+        data-aos-delay="500"
+      >
         {habitacion?.titulo}
       </p>
       {/* galeria */}
-      <div className="h-[25vh] md:h-[30vh] lg:h-[60vh] w-full m-auto  relative group transition-all my-6">
+      <div
+        className="h-[25vh] md:h-[30vh] lg:h-[60vh] w-full m-auto  relative group transition-all my-6"
+        data-aos="fade-right"
+        data-aos-duration="1000"
+        data-aos-delay="1000"
+      >
         <div
           style={{
             backgroundImage: `url(${habitacion?.img[currentIndex as number]})`,
@@ -44,10 +54,14 @@ export const HabitacionDetails = () => {
       </div>
 
       <Maps />
-      <p className="font-bold mb-2 text-xl">
+      <p
+        className="font-bold mb-2 text-xl"
+        data-aos="fade-right"
+        data-aos-duration="1000"
+      >
         Los Ángeles, California, Estados Unidos
       </p>
-      <p>
+      <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500">
         Ubicado a seis manzanas del Museo de la Academia (Oscars), el Museo de
         Arte del Condado de Los Ángeles, La Brea Tar Pits y el Peterson
         Automotive Museum en Museum Row. CBS-TV Studios, el mercado de

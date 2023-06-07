@@ -11,7 +11,11 @@ import {
 
 export const Beneficios = () => {
   return (
-    <div className="px-12 md:px-24 pb-6 grid grid-cols-1 md:grid-cols-2">
+    <div
+      className="px-12 md:px-24 pb-6 grid grid-cols-1 md:grid-cols-2"
+      data-aos="fade-in"
+      data-aos-duration="1000"
+    >
       <div className="col-span-1">
         <p className="text-xl text-primary font-semibold">
           Servicios mas solicitados

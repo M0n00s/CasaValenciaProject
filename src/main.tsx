@@ -5,8 +5,13 @@ import {
   useLocation,
 } from "../node_modules/react-router-dom/dist/index";
 import { LoginRouter } from "./login/LoginRouter";
-
+// global css
 import "./index.css";
+// animaciones
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+AOS.init();
 
 // import { AppPage } from "./Pages/AppPage";
 

@@ -3,7 +3,7 @@ import GoogleMaps from "simple-react-google-maps";
 
 export const Maps = () => {
   return (
-    <>
+    <div data-aos="fade-in" data-aos-duration="2000" data-aos-delay="100">
       <h3 className=" pt-6 text-4xl font-semibold text-primary">
         A donde iras...
       </h3>
@@ -16,6 +16,6 @@ export const Maps = () => {
           markers={{ lat: 8.88752, lng: -64.24544 }} //optional
         />
       </div>
-    </>
+    </div>
   );
 };

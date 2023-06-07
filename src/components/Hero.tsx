@@ -9,21 +9,41 @@ export const Hero = () => {
       className=" px-12 grid grid-cols-1 lg:grid-cols-8 overflow-x-hidden h-[100vh] "
     >
       <div className=" lg:col-span-5 flex flex-col  justify-center  gap-8 md:pt-[12vh] lg:pt-8 ">
-        <h1 className=" text-5xl md:text-7xl font-bold  ">
+        <h1
+          className=" text-5xl md:text-7xl font-bold  "
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          data-aos-delay="300"
+        >
           Comodidad, atención y diversión al alcance de todos
         </h1>
-        <p className="text-primary font-bold text-2xl mt-[-2rem]">
+        <p
+          className="text-primary font-bold text-2xl mt-[-2rem]"
+          data-aos="fade-in"
+          data-aos-duration="1000"
+          data-aos-delay="600"
+        >
           Una estancia como la mereces, en el
           <span className="text-secondary"> Tigre Estado Aragua</span>
         </p>
         <div className="flex flex-col md:flex-row items-center gap-8">
           <a href="#habitaciones">
-            <button className="bg-primary text-white py-2 px-4 rounded-lg font-semibold whitespace-nowrap   ">
+            <button
+              className="bg-primary text-white py-2 px-4 rounded-lg font-semibold whitespace-nowrap   "
+              data-aos="fade-in"
+              data-aos-duration="1000"
+              data-aos-delay="1000"
+            >
               Ver Habitaciones
             </button>
           </a>
           <a href="#contacto">
-            <button className="flex gap-2 items-center p-1  ">
+            <button
+              className="flex gap-2 items-center p-1  "
+              data-aos="fade-in"
+              data-aos-duration="1000"
+              data-aos-delay="1500"
+            >
               <IoMdCall className="bg-secondary text-white p-3 rounded-full box-content" />{" "}
               Contactanos
             </button>
