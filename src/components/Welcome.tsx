@@ -15,7 +15,7 @@ export const Welcome = () => {
         </p>
       </div>
       {/* Galeria */}
-      <div className="grid  grid-cols-1 md:grid-cols-8 rounded-lg px-12 md:px-24 py-6 gap-1  box-content">
+      <div className="grid  grid-cols-1 md:grid-cols-8 rounded-lg px-12 md:px-24 py-6 gap-1  box-content ">
         {/* foto grande */}
         <div className=" md:col-span-4 md:h-[35vh] lg:h-[50vh] ">
           <img

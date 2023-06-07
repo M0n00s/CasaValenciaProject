@@ -18,12 +18,12 @@ export const Hero = () => {
         </p>
         <div className="flex flex-col md:flex-row items-center gap-8">
           <a href="#habitaciones">
-            <button className="bg-primary text-white py-2 px-4 rounded-lg font-semibold whitespace-nowrap ">
+            <button className="bg-primary text-white py-2 px-4 rounded-lg font-semibold whitespace-nowrap   ">
               Ver Habitaciones
             </button>
           </a>
           <a href="#contacto">
-            <button className="flex gap-2 items-center p-1">
+            <button className="flex gap-2 items-center p-1  ">
               <IoMdCall className="bg-secondary text-white p-3 rounded-full box-content" />{" "}
               Contactanos
             </button>

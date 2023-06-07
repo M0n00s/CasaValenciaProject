@@ -11,9 +11,13 @@ export const ReservationDate = ({ habitacion }) => {
   // cant de meses en el calendario
   const [cantnum, setCantnum] = useState(1);
   useEffect(() => {
-    window.innerWidth > 900 && setCantnum(2);
-  }, []);
-  // console.log({ windows: window.innerWidth, cantnum });
+    if (window.innerWidth > 1200) {
+      setCantnum(2);
+    } else {
+      setCantnum(1);
+    }
+  }, [window.innerWidth]);
+  console.log({ windows: window.innerWidth, cantnum });
 
   const [state, setState] = useState([
     {
