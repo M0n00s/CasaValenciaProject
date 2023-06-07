@@ -1,6 +1,6 @@
 import { RiGovernmentLine } from "react-icons/ri";
-import { IoMdClose, IoMdApps, IoMdArrowRoundBack } from "react-icons/io";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { IoMdClose, IoMdMenu, IoMdArrowRoundBack } from "react-icons/io";
+import { NavLink, useLocation } from "react-router-dom";
 import { useState } from "react";
 
 export const Navbar = () => {
@@ -9,15 +9,27 @@ export const Navbar = () => {
   return (
     <header className="fixed bg-white flex w-full items-center justify-between px-4 md:px-10 shadow-md h-[10vh] z-[1000000000]">
       <div className="  flex items-center gap-2 text-primary">
-        <a
-          href="#home"
-          className="font-bold text-xl whitespace-nowrap flex items-center gap-2"
-        >
-          <span className="text-3xl">
-            <RiGovernmentLine />
-          </span>
-          Casa Valencia
-        </a>
+        {!location.pathname.includes("habitacion") ? (
+          <a
+            href="#home"
+            className="font-bold text-xl whitespace-nowrap flex items-center gap-2"
+          >
+            <span className="text-3xl">
+              <RiGovernmentLine />
+            </span>
+            Casa Valencia
+          </a>
+        ) : (
+          <NavLink
+            to={"/home"}
+            className="font-bold text-xl whitespace-nowrap flex items-center gap-2"
+          >
+            <span className="text-3xl">
+              <RiGovernmentLine />
+            </span>
+            Casa Valencia
+          </NavLink>
+        )}
       </div>
       <nav
         className={` bg-white  pl-8 shadow-md flex flex-col gap-10 fixed w-[80%] sm:max-w-[200px]  h-full top-[10vh] transition-all duration-300  md:static md:items-center  md:flex-row  md:justify-center md:shadow-none md:pl-0 flex-1  ${
@@ -46,7 +58,7 @@ export const Navbar = () => {
           <a href="#habitaciones">Habitaciones</a>
         )}
         {!location.pathname.includes("habitacion") && (
-          <a href="#contactanos">Contactanos</a>
+          <a href="#contacto">Contactanos</a>
         )}
       </nav>
       <div className=" justify-end items-center  flex gap-2">
@@ -54,7 +66,7 @@ export const Navbar = () => {
           onClick={() => setshowMenu(!showMenu)}
           className=" text-3xl md:hidden"
         >
-          {showMenu ? <IoMdClose /> : <IoMdApps />}
+          {showMenu ? <IoMdClose /> : <IoMdMenu />}
         </button>
       </div>
     </header>

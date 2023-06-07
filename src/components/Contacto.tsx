@@ -8,7 +8,7 @@ export const Contacto = () => {
   const [spiner, setSpiner] = useState(false);
   return (
     <div
-      id="contactanos"
+      id="contacto"
       className="flex flex-col items-center justify-center px-12 md:px-24"
     >
       <div className=" max-w-[480px] my-12">
