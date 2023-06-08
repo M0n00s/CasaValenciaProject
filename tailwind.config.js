@@ -5,6 +5,7 @@ export default {
     extend: {
       backgroundImage: {
         banner:
+          // '/src/images/casaValencia6.jpeg'
           'url("https://www.shutterstock.com/image-photo/chongqing-fengjie-drought-kuimen-scenery-600w-2279194709.jpg")',
       },
       colors: {
