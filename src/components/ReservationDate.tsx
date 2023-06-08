@@ -88,7 +88,7 @@ export const ReservationDate = ({ habitacion }) => {
           ) : (
             <button
               onClick={() => setReserva(true)}
-              className="px-4 py-2 bg-primary text-xl text-white font-bold rounded-xl w-full mt-6 mb-2"
+              className="px-4 py-2 bg-primary text-xl text-white rounded-xl w-full mt-6 mb-2"
             >
               {" "}
               Reservar{" "}

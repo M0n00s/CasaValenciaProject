@@ -6,25 +6,27 @@ export const Hero = () => {
   return (
     <div
       id="home"
-      className=" px-12 grid grid-cols-1 lg:grid-cols-8 overflow-x-hidden h-[100vh] "
+      // className=" px-12  overflow-x-hidden h-[100vh] " grid grid-cols-1 lg:grid-cols-8
+      className=" px-12 grid grid-cols-1 lg:grid-cols-1 overflow-x-hidden h-[100vh] "
     >
-      <div className=" lg:col-span-5 flex flex-col  justify-center  gap-8 md:pt-[12vh] lg:pt-8 ">
+      <div className="lg:col-span-5 flex flex-col  justify-center  gap-8 md:pt-[12vh] lg:pt-8">  
+      {/* // className=" lg:col-span-5 flex flex-col  justify-center  gap-8 md:pt-[12vh] lg:pt-8 "> */}
         <h1
-          className=" text-5xl md:text-7xl font-bold  "
+          className=" text-5xl md:text-7xl "
           data-aos="fade-right"
           data-aos-duration="1000"
           data-aos-delay="300"
         >
-          Comodidad, atención y diversión al alcance de todos
+          Casa Valencia, La Casa del Comfort
         </h1>
         <p
-          className="text-primary font-bold text-2xl mt-[-2rem]"
+          className="text-primary text-2xl mt-[-2rem]"
           data-aos="fade-in"
           data-aos-duration="1000"
           data-aos-delay="600"
         >
-          Una estancia como la mereces,
-          <span className="text-secondary"> El tigre, Estado Anzoategui</span>
+          El trato que mereces,
+          <span className="text-secondary"> El Tigre, Estado Anzoategui</span>
         </p>
         <div className="flex flex-col md:flex-row items-center gap-8">
           <a href="#habitaciones">
@@ -50,13 +52,13 @@ export const Hero = () => {
           </a>
         </div>
       </div>
-      <div className="r lg:col-span-3 hidden md:inline ">
+       {/* <div className="r lg:col-span-3 hidden md:inline ">
         <img
-          src="https://media.istockphoto.com/id/1146621051/es/vector/reserva-de-hotel-b%C3%BAsqueda-y-reserva-mano-sosteniendo-un-tel%C3%A9fono-inteligente-ilustraci%C3%B3n.jpg?s=612x612&w=0&k=20&c=FkB5nCg_fgsulnkmfMG9shrUPLBooLoWmWTXfJ4d_YM="
+          src="/src/images/casaValencia2.jpeg"
           alt="img"
           className=" md:w-[100%] lg:w-[100%] md:h-[80%] lg:h-[100%] object-contain "
         />
-      </div>
+      </div>  */}
     </div>
   );
 };

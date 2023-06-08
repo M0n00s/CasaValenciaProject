@@ -1,13 +1,12 @@
 import React from "react";
 import {
-  IoMdBriefcase,
   IoMdCar,
-  IoMdPaw,
+  IoMdDesktop,
   IoMdSnow,
   IoMdCloudDone,
-  IoMdSunny,
-  IoMdDoneAll,
+  IoIosLocate,
 } from "react-icons/io";
+import { FaCoffee, FaSearchLocation } from "react-icons/fa";
 
 export const Beneficios = () => {
   return (
@@ -18,46 +17,40 @@ export const Beneficios = () => {
     >
       <div className="col-span-1">
         <p className="text-xl text-primary font-semibold">
-          Servicios mas solicitados
+          Amenidades
         </p>
-        <div className="grid grid-cols-2 py-2">
+        <div className="flex flex-col py-2">
           <p className="col-span-1 flex items-center gap-2 pb-2">
-            <IoMdSunny className="text-secondary" /> Piscina
+            <FaCoffee className="text-secondary" /> Desayuno incluido
           </p>
           <p className="col-span-1 flex items-center gap-2 pb-2">
-            <IoMdCloudDone className="text-secondary" /> Wifi Gratis
-          </p>
-          <p className="col-span-1 flex items-center gap-2 pb-2">
-            <IoMdPaw className="text-secondary" /> Mascotas
-          </p>
-          <p className="col-span-1 flex items-center gap-2 pb-2">
-            <IoMdBriefcase className="text-secondary" /> Negocios
+            <IoMdCar className="text-secondary" /> Estacinamiento Gratis
           </p>
           <p className="col-span-1 flex items-center gap-2 pb-2">
             <IoMdSnow className="text-secondary" /> Aire Acondicionado
           </p>
           <p className="col-span-1 flex items-center gap-2 pb-2">
-            <IoMdCar className="text-secondary" /> Estacionamiento
+            <IoMdCloudDone className="text-secondary" /> Wifi Gratis
+          </p>
+          <p className="col-span-1 flex items-center gap-2 pb-2">
+            <IoMdDesktop className="text-secondary" /> TV
           </p>
         </div>
       </div>
       <div className="col-span-1">
-        <p className="text-xl font-semibold text-primary">Que hay en el area</p>
+        <p className="text-xl font-semibold text-primary">Cerca del area</p>
         <div className="flex flex-col py-2">
           <p className="col-span-1 flex items-center gap-2 pb-2">
-            <IoMdDoneAll className="text-green-500" size={15} /> The Mall of
-            Victor Valley (centro comercial)
+            <FaSearchLocation size={15} /> San Remo Mall
           </p>
           <p className="col-span-1 flex items-center gap-2 pb-2">
-            <IoMdDoneAll className="text-green-500" size={15} /> Scandia Family
-            Fun Center
+          <FaSearchLocation size={15} /> Paseo de la Virgen del Valle
           </p>
           <p className="col-span-1 flex items-center gap-2 pb-2">
-            <IoMdDoneAll className="text-green-500" size={15} /> Cal Earth Homes
+          <FaSearchLocation size={15} /> Estacion de servicio
           </p>
           <p className="col-span-1 flex items-center gap-2 pb-2">
-            <IoMdDoneAll className="text-green-500" size={15} /> San Bernardino,
-            CA (SBD-San Bernardino Intl.
+          <FaSearchLocation size={15} /> A 2  km de la salida a Bolivar
           </p>
         </div>
       </div>

@@ -12,7 +12,7 @@ export const Contacto = () => {
       className="flex flex-col items-center justify-center px-12 md:px-24"
     >
       <div className=" max-w-[480px] my-12">
-        <p className="text-primary text-4xl py-6 font-bold self-start">
+        <p className="text-primary text-4xl py-6 self-start">
           Contactanos
         </p>
         <Formik
@@ -122,7 +122,7 @@ export const Contacto = () => {
               </div>
 
               <button
-                className="flex items-center justify-center gap-4 col-span-1 md:col-span-2 py-4 bg-primary text-white rounded-md font-bold"
+                className="flex items-center justify-center gap-4 col-span-1 md:col-span-2 py-4 bg-primary text-white rounded-md"
                 type="submit"
               >
                 {spiner ? (

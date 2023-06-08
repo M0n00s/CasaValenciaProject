@@ -19,7 +19,7 @@ export const HabitacionDetails = () => {
   return (
     <div className=" px-12 md:px-24 py-6 pt-[12vh]">
       <p
-        className="font-bold text-primary text-6xl md:text-7xl"
+        className=" text-primary text-6xl md:text-7xl"
         data-aos="fade-right"
         data-aos-duration="1000"
         data-aos-delay="500"
@@ -55,7 +55,7 @@ export const HabitacionDetails = () => {
 
       <Maps />
       <p
-        className="font-bold mb-2 text-xl"
+        className=" mb-2 text-xl"
         data-aos="fade-right"
         data-aos-duration="1000"
       >

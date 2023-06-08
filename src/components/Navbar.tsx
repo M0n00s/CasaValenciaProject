@@ -12,7 +12,7 @@ export const Navbar = () => {
         {!location.pathname.includes("habitacion") ? (
           <a
             href="#home"
-            className="font-bold text-xl whitespace-nowrap flex items-center gap-2"
+            className="text-xl whitespace-nowrap flex items-center gap-2"
           >
             <img
               className="w-[8rem]"
@@ -27,7 +27,7 @@ export const Navbar = () => {
         ) : (
           <NavLink
             to={"/home"}
-            className="font-bold text-xl whitespace-nowrap flex items-center gap-2"
+            className=" text-xl whitespace-nowrap flex items-center gap-2"
           >
             <span className="text-3xl">
               <RiGovernmentLine />
@@ -51,7 +51,7 @@ export const Navbar = () => {
             "Home"
           ) : (
             <p className="font-semibold text-primary flex items-center gap-4">
-              <span className="text-2xl font-bold">
+              <span className="text-2xl">
                 <IoMdArrowRoundBack />
               </span>{" "}
               Volver a Home
