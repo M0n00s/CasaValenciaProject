@@ -20,7 +20,7 @@ export const HabitacionCard = ({
   // console.log(prevSlide, nextSlide, currentIndex);
 
   return (
-    <>
+    <section className="hover:bg-primary/40  p-5 rounded-xl transition hover:shadow-xl">
       <div className="h-[25vh] md:h-[15vh] lg:h-[40vh] w-full m-auto  relative group transition-all ">
         <div
           style={{ backgroundImage: `url(${img[currentIndex as number]})` }}
@@ -68,6 +68,6 @@ export const HabitacionCard = ({
           </p>
         </div>
       </Link>
-    </>
+    </section>
   );
 };

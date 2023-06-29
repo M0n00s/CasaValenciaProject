@@ -7,7 +7,7 @@ export const Hero = () => {
     <div
       id="inicio"
       // className=" px-12  overflow-x-hidden h-[100vh] " grid grid-cols-1 lg:grid-cols-8
-      className=" px-20 py-20 grid grid-cols-1 lg:grid-cols-1 overflow-x-hidden  "
+      className=" px-20 pt-32 pb-10 grid grid-cols-1 lg:grid-cols-1 overflow-x-hidden  "
     >
       <div className="lg:col-span-5 flex flex-col  justify-center  gap-8 md:pt-[12vh] lg:pt-8">
         {/* // className=" lg:col-span-5 flex flex-col  justify-center  gap-8 md:pt-[12vh] lg:pt-8 "> */}
