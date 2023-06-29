@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 export const Hero = () => {
   return (
     <div
-      id="home"
+      id="inicio"
       // className=" px-12  overflow-x-hidden h-[100vh] " grid grid-cols-1 lg:grid-cols-8
-      className=" px-12 grid grid-cols-1 lg:grid-cols-1 overflow-x-hidden h-[100vh] "
+      className=" px-20 py-20 grid grid-cols-1 lg:grid-cols-1 overflow-x-hidden  "
     >
-      <div className="lg:col-span-5 flex flex-col  justify-center  gap-8 md:pt-[12vh] lg:pt-8">  
-      {/* // className=" lg:col-span-5 flex flex-col  justify-center  gap-8 md:pt-[12vh] lg:pt-8 "> */}
+      <div className="lg:col-span-5 flex flex-col  justify-center  gap-8 md:pt-[12vh] lg:pt-8">
+        {/* // className=" lg:col-span-5 flex flex-col  justify-center  gap-8 md:pt-[12vh] lg:pt-8 "> */}
         <h1
           className=" text-5xl md:text-7xl "
           data-aos="fade-right"
@@ -52,7 +52,7 @@ export const Hero = () => {
           </a>
         </div>
       </div>
-       {/* <div className="r lg:col-span-3 hidden md:inline ">
+      {/* <div className="r lg:col-span-3 hidden md:inline ">
         <img
           src="/src/images/casaValencia2.jpeg"
           alt="img"

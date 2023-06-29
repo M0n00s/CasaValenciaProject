@@ -1,17 +1,20 @@
 import { RiGovernmentLine } from "react-icons/ri";
 import { IoMdClose, IoMdMenu, IoMdArrowRoundBack } from "react-icons/io";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useParams } from "react-router-dom";
 import { useState } from "react";
 
 export const Navbar = () => {
-  let location = useLocation();
+  const location = useLocation();
+
   const [showMenu, setshowMenu] = useState(false);
+  const url = window.location;
+
   return (
     <header className="fixed bg-white flex w-full items-center justify-between px-4 md:px-10 shadow-md h-[10vh] z-[1000000000]">
       <div className="  flex items-center gap-2 text-primary">
         {!location.pathname.includes("habitacion") ? (
           <a
-            href="#home"
+            href="#inicio"
             className="text-xl whitespace-nowrap flex items-center gap-2"
           >
             <img
@@ -29,10 +32,11 @@ export const Navbar = () => {
             to={"/home"}
             className=" text-xl whitespace-nowrap flex items-center gap-2"
           >
-            <span className="text-3xl">
-              <RiGovernmentLine />
-            </span>
-            Casa Valencia
+            <img
+              className="w-[8rem]"
+              src="https://res.cloudinary.com/dksz8cxlh/image/upload/v1686169279/casavalencia%20img/CasaV-Logo.png"
+              alt="logo"
+            />
           </NavLink>
         )}
       </div>
@@ -41,29 +45,50 @@ export const Navbar = () => {
           showMenu ? "left-0" : "-left-full"
         } `}
       >
-        <NavLink
-          to={`/home`}
-          className={({ isActive }) =>
-            isActive ? "font-semibold text-primary" : ""
-          }
-        >
-          {!location.pathname.includes("habitacion") ? (
-            "Home"
-          ) : (
+        {!location.pathname.includes("habitacion") ? (
+          <a
+            href="#inicio"
+            className={`${
+              url.hash.includes("inicio") ? "font-semibold text-primary" : ""
+            }`}
+          >
+            Inicio
+          </a>
+        ) : (
+          <NavLink
+            to={`/home`}
+            className={({ isActive }) =>
+              isActive ? "font-semibold text-primary" : ""
+            }
+          >
             <p className="font-semibold text-primary flex items-center gap-4">
               <span className="text-2xl">
                 <IoMdArrowRoundBack />
               </span>{" "}
               Volver a Home
             </p>
-          )}
-        </NavLink>
+          </NavLink>
+        )}
 
         {!location.pathname.includes("habitacion") && (
-          <a href="#habitaciones">Habitaciones</a>
+          <a
+            href="#habitaciones"
+            className={`${
+              url.hash.includes("#habitaciones") && "font-semibold text-primary"
+            }`}
+          >
+            Habitaciones
+          </a>
         )}
         {!location.pathname.includes("habitacion") && (
-          <a href="#contacto">Contactanos</a>
+          <a
+            href="#contacto"
+            className={`${
+              url.hash.includes("#contacto") && "font-semibold text-primary"
+            }`}
+          >
+            Contactanos
+          </a>
         )}
       </nav>
       <div className=" justify-end items-center  flex gap-2">
